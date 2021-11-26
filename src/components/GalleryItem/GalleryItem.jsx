@@ -3,7 +3,7 @@ import {useState} from 'react';
 function GalleryItem({picture}){
     return(
         <div>
-            <li key={picture.id}>
+            <li>
                 <img src={picture.path}/>
             </li>
         </div>
