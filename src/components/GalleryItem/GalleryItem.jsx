@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import './GalleryItem.css';
 
 function GalleryItem({picture, setLikes}){
 
@@ -18,11 +19,11 @@ function GalleryItem({picture, setLikes}){
 
     return(
         <div className="GalleryItem-Div">
-            <div GalleryItem-Box>
+            <div className ="GalleryItem-Box">
                 {flipPicture()}
+                <button  onClick={()=>setLikes(picture.id)}>Like!</button>
+                <span className="GalleryItem-Likes">Likes: {picture.likes}</span>
             </div>
-            <button  onClick={()=>setLikes(picture.id)}>Like</button>
-            <span className="GalleryItem-Likes">Likes: {picture.likes}</span>
         </div>
     );
 };
