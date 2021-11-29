@@ -7,6 +7,7 @@ function GalleryList({galleryArray, setLikes}) {
         <div>
                 {galleryArray.map((picture) =>{
                     return <GalleryItem key={picture.id} setLikes={setLikes} picture={picture}/>
+
                 })}
         </div>
     );
