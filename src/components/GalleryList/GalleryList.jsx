@@ -6,11 +6,11 @@ function GalleryList({galleryArray}) {
     return (
         <div>
             <h1>Gallery Array Test:</h1>
-            <ul>
+            <div>
                 {galleryArray.map((picture) =>{
-                    return <GalleryItem picture={picture}/>
+                    return <GalleryItem key={picture.id} picture={picture}/>
                 })}
-            </ul>
+            </div>
         </div>
     );
 };

@@ -14,17 +14,29 @@ function App() {
     fetchGallery();
   }, []);
 
-  //GET requestconst fetchGallery = () => {
+  //GET request 
   function fetchGallery() {
     axios({
         method: 'GET',
         url: '/gallery'
     }).then((response) =>{
-        console.log('fetchGallery response:', response);
+        console.log('fetchGallery response:', response.data);
         setGalleryArray(response.data);
         console.log(galleryArray);
     }).catch((error) =>{
         console.log('fetchGallery error:', error);
+    });
+  };
+
+  //PUT request
+  function setLikes(id) {
+    axios({
+      method: 'PUT'
+      //
+    }).then((response) => {
+      console.log('setLikes response:', response);
+    }).catch((error) =>{
+      console.log('setLikes error:', error);
     });
   };
 
@@ -38,6 +50,6 @@ function App() {
       <img src="images/goat_small.jpg"/>
     </div>
   );
-}
+};
 
 export default App;
