@@ -1,0 +1,16 @@
+.GalleryItem-Box{
+    float: left;
+    margin: 20px;
+    height: 350px;
+    width: 450px;
+    display: block;
+}
+.GalleryItem-Text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+    padding-bottom: 400px;
+}
+button{
+    margin-right: 10px;
+    padding: 5px;
+}

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: green;
 }
 
 .App-header {
@@ -11,5 +12,15 @@
 
 .App-title {
   font-size: 1.5em;
+}
+
+.GalleryList-Div{
+  margin-right: auto; /* 1 */
+  margin-left:  auto; /* 1 */
+
+  max-width: 1470px; /* 2 */
+
+  padding-right: 10px; /* 3 */
+  padding-left:  10px; /* 3 */
 }
 

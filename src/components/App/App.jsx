@@ -29,12 +29,13 @@ function App() {
   };
 
   //PUT request
-  function setLikes() {
+  const setLikes = (id) =>{
     axios({
-      method: 'PUT'
-      //
+      method: 'PUT',
+      url: `/gallery/like/${id}`
     }).then((response) => {
       console.log('setLikes response:', response);
+      fetchGallery();
     }).catch((error) =>{
       console.log('setLikes error:', error);
     });
@@ -45,9 +46,9 @@ function App() {
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
-      <p>Gallery goes here</p>
-      <GalleryList galleryArray={galleryArray}/>
-      <img src="images/goat_small.jpg"/>
+      <div className="GalleryList-Div">
+        <GalleryList galleryArray={galleryArray} setLikes={setLikes}/>
+      </div>
     </div>
   );
 };
