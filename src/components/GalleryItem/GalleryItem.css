@@ -3,7 +3,7 @@
     margin: 20px;
     height: 350px;
     width: 450px;
-    display: inline-block;
+    display: block;
 }
 .GalleryItem-Text{
     font-family: 'Roboto', sans-serif;
